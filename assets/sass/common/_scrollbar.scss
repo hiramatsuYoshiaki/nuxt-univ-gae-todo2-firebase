@@ -1,4 +1,4 @@
-html{
+html {
   overflow-y: scroll;
   // overflow-y: auto;
   // overflow-y: hidden;
@@ -6,18 +6,18 @@ html{
 
 /*スクロールバー全体*/
 ::-webkit-scrollbar {
-    width: 16px;
-    // width: 6px;
+  width: 16px;
+  // width: 6px;
 }
- 
+
 /*スクロールバーの軌道*/
 ::-webkit-scrollbar-track {
   // background: transparent;
   border-radius: 10px;
-  box-shadow: inset 0 0 6px rgba(33, 33, 33, .1);
-  display: none ;
+  box-shadow: inset 0 0 6px rgba(33, 33, 33, 0.1);
+  display: none;
 }
- 
+
 /*スクロールバーの動く部分*/
 ::-webkit-scrollbar-thumb {
   background-color: rgba(105, 105, 105, 0.5);

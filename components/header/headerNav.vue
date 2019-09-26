@@ -6,14 +6,12 @@
     >
       <div class="m-menu-wrap">
         <div class="menu_items menu_items_column">
-          <div class="menu-item-box">
+          <!-- <div class="menu-item-box">
             <div
               class="menu_link"
               :class="{ menu_item_visible: page === '/auth' }"
               @click="link_commit('/auth')"
-            >
-              Auth
-            </div>
+            >Auth</div>
             <div class="menu_underline" />
           </div>
           <div class="menu-item-box">
@@ -21,9 +19,7 @@
               class="menu_link"
               :class="{ menu_item_visible: page === '/mypage' }"
               @click="link_commit('/mypage')"
-            >
-              CRUD
-            </div>
+            >CRUD</div>
             <div class="menu_underline" />
           </div>
 
@@ -32,11 +28,9 @@
               class="menu_link"
               :class="{ menu_item_visible: page === '/contact' }"
               @click="link_commit('/contact')"
-            >
-              CONTACT
-            </div>
+            >CONTACT</div>
             <div class="menu_underline" />
-          </div>
+          </div>-->
 
           <!-- <div class="menu-item-box">
             <div
@@ -53,7 +47,7 @@
               </div>
             </div>
             <div class="menu_underline" />
-          </div> -->
+          </div>-->
         </div>
       </div>
     </div>
@@ -73,14 +67,12 @@
       <div class="block right-block">
         <div class="m-menu-wrap menu-display">
           <div class="menu_items menu_items_row">
-            <div class="menu-item-box">
+            <!-- <div class="menu-item-box">
               <a
                 class="menu_link"
                 :class="{ menu_item_visible: page === '/auth' }"
                 @click="link_commit('/auth')"
-              >
-                Auth
-              </a>
+              >Auth</a>
               <div class="menu_underline" />
             </div>
             <div class="menu-item-box">
@@ -88,9 +80,7 @@
                 class="menu_link"
                 :class="{ menu_item_visible: page === '/mypage' }"
                 @click="link_commit('/mypage')"
-              >
-                CRUD
-              </a>
+              >CRUD</a>
               <div class="menu_underline" />
             </div>
 
@@ -99,11 +89,9 @@
                 class="menu_link"
                 :class="{ menu_item_visible: page === '/contact' }"
                 @click="link_commit('/contact')"
-              >
-                CONTACT
-              </a>
+              >CONTACT</a>
               <div class="menu_underline" />
-            </div>
+            </div>-->
 
             <div v-if="isAuthenticated" class="menu-item-box">
               <a
@@ -122,7 +110,7 @@
                 </div>
                 <div v-else>
                   Login
-                </div> -->
+                </div>-->
               </a>
               <div class="menu_underline" />
             </div>
@@ -143,7 +131,7 @@
                 </div>
                 <div v-else>
                   Login
-                </div> -->
+                </div>-->
               </a>
               <div class="menu_underline" />
             </div>

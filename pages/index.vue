@@ -22,23 +22,23 @@
             <p>Strage</p>
             <div>Used: Firebase</div>
           </div>
-        </div> -->
+        </div>-->
         <div class="subscription">
-          <div class=" todo-demo">
+          <div class="todo-demo">
             <h3>Authentication</h3>
             <div class="line" />
             <div>
-              <div class="menu_link " @click="link_commit('/loginEmail')">
+              <div class="menu_link" @click="link_commit('/loginEmail')">
                 <p><i class="material-icons">insert_link</i>Email Password</p>
               </div>
             </div>
             <div>
-              <div class="menu_link " @click="link_commit('/emailLink')">
+              <div class="menu_link" @click="link_commit('/emailLink')">
                 <p><i class="material-icons">insert_link</i>Email Link</p>
               </div>
             </div>
             <div>
-              <div class="menu_link " @click="link_commit('/loginGoogle')">
+              <div class="menu_link" @click="link_commit('/loginGoogle')">
                 <p><i class="material-icons">insert_link</i>Google</p>
               </div>
             </div>
@@ -57,26 +57,22 @@
         </span>
       </div>
     </div>
-    <div class="sub-content sub-con-wraper">
+    <!-- <div class="sub-content sub-con-wraper">
       <div class="overview">
         <div class="links">
           <a
             href="https://nuxt-univ-gae-app.appspot.com/"
             target="_blank"
             class="button--green"
-          >
-            Setting
-          </a>
+          >Setting</a>
           <a
             href="https://github.com/hiramatsuYoshiaki/nuxt-univ-gae-todo2-firebase"
             target="_blank"
             class="button--grey"
-          >
-            GitHub
-          </a>
+          >GitHub</a>
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 
@@ -87,7 +83,12 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
-  layout: 'topPage',
+  layout: 'baseLayout',
+  // layout: 'useLoginLayout',
+  // layout: 'loginLayout',
+  // layout: 'useLayout',
+  // layout: 'loginHeader',
+  // layout: 'topPage',
   // layout: 'default',
   // layout: 'custom',
   components: {
