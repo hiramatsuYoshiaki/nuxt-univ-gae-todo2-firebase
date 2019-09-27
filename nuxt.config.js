@@ -3,7 +3,7 @@ export default {
   /*
    ** Headers of the page
    */
-  
+
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -23,10 +23,19 @@ export default {
     link: [
       // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       { rel: 'icon', type: 'image/x-icon', href: '/h-logo-white.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Roboto'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.6.3/css/all.css'
+      }
     ]
-    
   },
   /*
    ** Customize the progress-bar color
@@ -35,13 +44,11 @@ export default {
   /*
    ** Global CSS
    */
-  css: [
-    '@/assets/sass/styles.scss'
-  ],
+  css: ['@/assets/sass/styles.scss'],
   /*
    ** Plugins to load before mounting the App
    */
-  
+
   plugins: [
     //firebaseを使う
     '~/plugins/firebase',
@@ -57,19 +64,17 @@ export default {
     // ['@nuxtjs/google-analytics', { id: 'UA-xxxxxxxx-5' }],
     // '@nuxtjs/sitemap',
     '@nuxtjs/markdownit',
-    '@nuxtjs/dotenv',
+    '@nuxtjs/dotenv'
   ],
   env: {
     FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
     FIREBASE_AUTH_DOMAIN: process.env.FIREBASE_AUTH_DOMAIN,
     FIREBASE_DATABASEURL: process.env.FIREBASE_DATABASEURL,
     FIREBASE_PROJECTID: process.env.FIREBASE_PROJECTID,
-    FIREBASE_STORAGEBUCKET: process.env.FIREBASE_STORAGEBUCKET,
+    FIREBASE_STORAGEBUCKET: process.env.FIREBASE_STORAGEBUCKET
   },
   styleResources: {
-    sass: [
-      '~/assets/sass/variable.scss',
-    ],
+    sass: ['~/assets/sass/variable.scss']
   },
   //devModules: ['@nuxtjs/eslint-module'],
   // sitemap: {
@@ -89,15 +94,17 @@ export default {
   // },
   markdownit: {
     preset: 'default',
-    injected: true, 
-    breaks: true, 
-    html: true, 
+    injected: true,
+    breaks: true,
+    html: true,
     linkify: true,
-    typography: true, 
+    typography: true,
     xhtmlOut: true,
     langPrefix: 'language-',
     quotes: '“”‘’',
-    highlight: function (/*str, lang*/) { return ''; },
+    highlight: function(/*str, lang*/) {
+      return ''
+    }
   },
   /*
    ** Axios module configuration
@@ -119,12 +126,12 @@ export default {
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/,
-          options : {
-            fix : true
+          options: {
+            fix: true
           }
         })
       }
-    },
+    }
     //autoprefixer
     // build: {
     //   postcss: [

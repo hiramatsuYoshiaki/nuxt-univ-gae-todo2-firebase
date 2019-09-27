@@ -1,295 +1,238 @@
-body {
-    font-family: $font-family;
-}
-// html {
-//     @media only screen and (min-width: 0) {
-//         font-size: 12px;
-//     }
-//     @media only screen and (min-width: 576px) {
-//         font-size: 14px;
-//     }
-//     @media only screen and (min-width: 992px) {
-//         font-size: 16px;
-//     }
-//     @media only screen and (min-width: 1200px) {
-//         font-size: 16px;
-//     }
-// }
-// html {
-//     font-size: 62.5%;
-// }
+// $size-1: 3rem !default;
+// $size-2: 2.5rem !default;
+// $size-3: 2rem !default;
+// $size-4: 1.5rem !default;
+// $size-5: 1.25rem !default;
+// $size-6: 1rem !default;
+// $size-7: 0.75rem !default;
 
-// h1, .h1 {
-//     font-size: 2.5rem;
-// }
+// $weight-light: 300 !default;
+// $weight-normal: 400 !default;
+// $weight-medium: 500 !default;
+// $weight-semibold: 600 !default;
+// $weight-bold: 700 !default;
+$mobile: 0.8; //768
+$tablet: 1; //769
+$desktop: 1.2; //960
+$widescreen: 1.5; //1152
+$fullhd: 1.7; //1344
 
-// h2, .h2 {
-//     font-size: 2rem;
-// }
-
-// h3, .h3 {
-//     font-size: 1.75rem;
-// }
-
-// h4, .h4 {
-//     font-size: 1.5rem;
-// }
-
-// h5, .h5 {
-//     font-size: 1.25rem;
-//     }
-
-// h6, .h6 {
-//     font-size: 1rem;
-// }
-
-// p{
-//     font-size: 1.2rem;  
-// }
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//     font-weight: 300;
-// }
-// p{
-//     font-weight: 500;  
-// }
-html {
-    font-size: 62.5%;
-    //1em=10px
-}
-body {
-    font-size: 1.6rem;
+h1,
+.h1 {
+  font-size: $size-1;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
-h1, .h1 {
-    // font-size: 2.5rem;//2.5x16=40px
-    font-size: 4.0rem;
+h2,
+.h2 {
+  font-size: $size-2;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
-h2, .h2 {
-    // font-size: 2rem;//2x16=32px
-    font-size: 3.0rem;
+h3,
+.h3 {
+  font-size: $size-3;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
-h3, .h3 {
-    // font-size: 1.75rem;//1.75x16=28px
-    font-size: 2.8rem;
-
+h4,
+.h4 {
+  font-size: $size-4;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
-h4, .h4 {
-    // font-size: 1.5rem;//1.5x16=24px
-    font-size: 2.4rem;
-
+h5,
+.h5 {
+  font-size: $size-5;
+  font-weight: 400;
+  line-height: 1.5;
+}
+h6,
+.h6 {
+  font-size: $size-6;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
-h5, .h5 {
-    // font-size: 1.25rem;//20px
-    font-size: 2.0rem;
-
-    }
-
-h6, .h6 {
-    // font-size: 1rem;//16px
-    font-size: 1.6rem;
-
-}
-
-p{
-    // font-size: 1.25rem;//20px
-    font-size: 1.25rem;
-
+p {
+  font-size: $size-5;
+  font-weight: 500;
+  line-height: 1.5;
 }
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-    font-weight: 300;
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+h5,
+.h6 {
+  font-weight: 300;
 }
-p{
-    font-weight: 500;  
+p,
+.p {
+  font-weight: 500;
 }
 
+/* Responsive Headings */
 
+@media (max-width: 768px) {
+  h1,
+  .h1 {
+    font-size: calc(#{$mobile} * #{$size-1});
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  h2,
+  .h2 {
+    font-size: calc(#{$mobile} * #{$size-2});
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  h3,
+  .h3 {
+    font-size: calc(#{$mobile} * #{$size-3});
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  h4,
+  .h4 {
+    font-size: calc(#{$mobile} * #{$size-4});
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  h5,
+  .h5 {
+    font-size: calc(#{$mobile} * #{$size-5});
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  h6,
+  .h6 {
+    font-size: calc(#{$mobile} * #{$size-6});
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  p,
+  .p {
+    font-size: calc(#{$mobile} * #{$size-5});
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
+/* Small Devices, Tablets */
+// 769/960/1152/1344
 
-   /* Responsive Headings */
-    /* Extra Small Devices, Phones */
-    
-    @media only screen and (max-width: 768px) {
-        .h1-responsive {
-            font-size: 150%;
-            font-weight: 500;
-        }
-        .h2-responsive {
-            font-size: 145%;
-        }
-        .h3-responsive {
-            font-size: 135%;
-        }
-        .h4-responsive {
-            font-size: 135%;
-        }
-        .h5-responsive {
-            font-size: 135%;
-        }
-    }
-    /* Small Devices, Tablets */
-    
-    @media only screen and (min-width: 768px) {
-        .h1-responsive {
-            font-size: 170%;
-        }
-        .h2-responsive {
-            font-size: 140%;
-        }
-        .h3-responsive {
-            font-size: 125%;
-        }
-        .h4-responsive {
-            font-size: 125%;
-        }
-        .h5-responsive {
-            font-size: 125%;
-        }
-    }
-    /* Medium Devices, Desktops */
-    
-    @media only screen and (min-width: 992px) {
-        .h1-responsive {
-            font-size: 200%;
-        }
-        .h2-responsive {
-            font-size: 170%;
-        }
-        .h3-responsive {
-            font-size: 140%;
-        }
-        .h4-responsive {
-            font-size: 125%;
-        }
-        .h5-responsive {
-            font-size: 125%;
-        }
-    }
-    /* Large Devices, Wide Screens */
-    
-    @media only screen and (min-width: 1200px) {
-        .h1-responsive {
-            font-size: 250%;
-        }
-        .h2-responsive {
-            font-size: 200%;
-        }
-        .h3-responsive {
-            font-size: 170%;
-        }
-        .h4-responsive {
-            font-size: 140%;
-        }
-        .h5-responsive {
-            font-size: 125%;
-        }
-    }
-   
-    // .section {
-    //     margin-bottom: 2rem;
-    //     .section-heading {
-    //         @extend .h1-responsive;
-    //         margin-top: 2rem;
-    //         margin-bottom: 4rem;
-    //     }
-    //     .section-description {
-    //         color: #757575;
-    //         margin-bottom: 4rem;
-    //         margin-left: 15%;
-    //         margin-right: 15%;
-    //         text-align: center;
-    //         @media (max-width: 992px) {
-    //             margin-left: 5%;
-    //             margin-right: 5%;
-    //         }
-    //     }
-    //     img,
-    //     .view {
-    //         @extend .img-fluid;
-    //         @extend .z-depth-1-half;
-    //     }
-    //     .jumbotron {
-    //         @extend .z-depth-2;
-    //     }
-    //     h4 {
-    //         font-weight: 400;
-    //     }
-    //     h5 .fa {
-    //         margin-right: 8px;
-    //     } 
-    //     hr { 
-    //         margin-top: 1rem;
-    //         margin-bottom: 3rem;
-    //     }
-    //     .map-container {
-    //         img {
-    //             @extend .z-depth-0;
-    //         }
-    //     }
-    //     .contact-icons {
-    //         text-align: center;
-    //         li {
-    //             margin-bottom: 2.2rem;
-    //         }
-    //         .fa {
-    //             font-size: 2.2rem;
-    //             margin-bottom: 0.6rem;
-    //             color: #424242;
-    //         }
-    //     }
-    // }
-    
-    // .between-sections {
-    //     margin-bottom: 4rem;
-    // }
-    
-    // Lists default style
-    // ul {
-    //     padding: 0;
-    //     list-style-type: none;
-    //     li {
-    //         list-style-type: none;
-    //     }
-    // }
-    
-    // List style types
-    // .list-disc {
-    //     li {
-    //         list-style-type: disc;
-    //     }
-    // }
-    
-    // .list-circle {
-    //     li {
-    //         list-style-type: circle;
-    //     }
-    // }
-    
-    // .list-square {
-    //     li {
-    //         list-style-type: square;
-    //     }
-    // }
-    
-    // .list-roman {
-    //     li {
-    //         list-style-type: upper-roman;
-    //     }
-    // }
-    // .list-alpha {
-    //     li {
-    //         list-style-type: upper-alpha;
-    //     }
-    // }    
+@media (min-width: 960px) {
+  h1,
+  .h1 {
+    font-size: calc(#{$desktop} * #{$size-1});
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  h2,
+  .h2 {
+    font-size: calc(#{$desktop} * #{$size-2});
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  h3,
+  .h3 {
+    font-size: calc(#{$desktop} * #{$size-3});
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  h4,
+  .h4 {
+    font-size: calc(#{$desktop} * #{$size-4});
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  h5,
+  .h5 {
+    font-size: calc(#{$desktop} * #{$size-5});
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  h6,
+  .h6 {
+    font-size: calc(#{$desktop} * #{$size-6});
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  p,
+  .p {
+    font-size: calc(#{$desktop} * #{$size-5});
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
+@media (min-width: 1152px) {
+  h1,
+  .h1 {
+    font-size: calc(#{$widescreen} * #{$size-1});
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  h2,
+  .h2 {
+    font-size: calc(#{$widescreen} * #{$size-2});
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  h3,
+  .h3 {
+    font-size: calc(#{$widescreen} * #{$size-3});
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  h4,
+  .h4 {
+    font-size: calc(#{$widescreen} * #{$size-4});
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  h5,
+  .h5 {
+    font-size: calc(#{$widescreen} * #{$size-5});
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  h6,
+  .h6 {
+    font-size: calc(#{$widescreen} * #{$size-6});
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  p,
+  .p {
+    font-size: calc(#{$widescreen} * #{$size-5});
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+h5,
+.h6,
+p,
+.p {
+  margin: 0;
+  padding: 0;
+}

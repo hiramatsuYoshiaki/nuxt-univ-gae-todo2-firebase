@@ -14,9 +14,10 @@
           contact
       </nuxt-link>-->
       <li v-for="(item, key) of items" :key="key">
-        <nuxt-link :to="item.to.name">
-          {{ item.title }}
-        </nuxt-link>
+        <a :href="item.link">
+          <!-- {{ item.title }} -->
+          <i :class="item.icon" />
+        </a>
       </li>
     </ul>
   </div>
@@ -27,20 +28,29 @@ export default {
     return {
       items: [
         {
-          title: 'Home',
-          to: { name: '/' }
+          title: 'Twitter',
+          link: 'https://twitter.com/',
+          icon: 'fab fa-twitter'
         },
         {
-          title: 'Works',
-          to: { name: '/works' }
+          title: 'instagram',
+          link: 'https://www.instagram.com/',
+          icon: 'fab fa-instagram'
         },
         {
-          title: 'About',
-          to: { name: '/about' }
+          title: 'facebook',
+          link: 'https://www.facebook.com/',
+          icon: 'fab fa-facebook-square'
         },
         {
-          title: 'Contact',
-          to: { name: '/contact' }
+          title: 'github',
+          link: 'https://github.com/',
+          icon: 'fab fa-github-square'
+        },
+        {
+          title: 'youtube',
+          link: 'https://www.youtube.com/',
+          icon: 'fab fa-youtube'
         }
       ]
     }

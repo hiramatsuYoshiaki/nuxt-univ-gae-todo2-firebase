@@ -1,33 +1,25 @@
 <template>
   <div>
     <loginLayout>
-      <template v-slot:mobileMenu>
+      <template v-slot:mobileWindow>
         <div class="mobileMenu-wrape">
-          <div class="burger">
-            <slot name="burger" />
-          </div>
           <div class="brand">
             <div>
               <slot name="brand" />
             </div>
           </div>
-          <div class="glovalMenu">
-            <slot name="glovalMenu" />
+          <div class="mobile-menu">
+            <slot name="mobileMenu" />
           </div>
-          <div class="loginMenu">
+          <div class="login-menu">
             <slot name="loginMenu" />
+          </div>
+          <div class="btn-close hw--btn" @click="closeMobileMenu()">
+            <i class="material-icons">close</i>
           </div>
         </div>
       </template>
-
       <template v-slot:headerBar>
-        <!-- <div v-if="isOpenMobileMenu" class="mobileMenu">
-          <slot name="mobileMenu" />
-          <h1>Mobile Menu2</h1>
-          <div @click="closeMobileMenu()">
-            <i class="material-icons">close</i>
-          </div>
-        </div>-->
         <div class="header-wrape">
           <div class="burger">
             <slot name="burger" />
@@ -37,10 +29,10 @@
               <slot name="brand" />
             </div>
           </div>
-          <div class="glovalMenu">
+          <div class="gloval-menu-header">
             <slot name="glovalMenu" />
           </div>
-          <div class="loginMenu">
+          <div class="login-menu">
             <slot name="loginMenu" />
           </div>
         </div>
@@ -51,19 +43,19 @@
       </div>
       <template v-slot:footerBar>
         <div class="footer-wrape">
-          <div class="burger">
-            <slot name="burger" />
+          <div class="footer-items gloval-menu-footer">
+            <slot name="mobileMenu" />
           </div>
-          <div class="brand">
+          <div class="footer-items brand-footer">
             <div>
               <slot name="brand" />
             </div>
           </div>
-          <div class="glovalMenu">
-            <slot name="glovalMenu" />
+          <div class="footer-items sns-footer">
+            <slot name="sns" />
           </div>
-          <div class="loginMenu">
-            <slot name="loginMenu" />
+          <div class="footer-items copylight-footer">
+            <slot name="copylight" />
           </div>
         </div>
       </template>
@@ -71,8 +63,7 @@
   </div>
 </template>
 <script>
-import { mapState } from 'vuex'
-// import { mapState, mapMutations } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 import loginLayout from '~/layouts/loginLayout.vue'
 export default {
   components: {
@@ -80,13 +71,13 @@ export default {
   },
   computed: {
     ...mapState('headerBar', ['isOpenMobileMenu'])
+  },
+  methods: {
+    ...mapMutations({ close: 'headerBar/setOpenMobileMenu' }),
+    closeMobileMenu() {
+      this.close()
+    }
   }
-  //   methods: {
-  //     ...mapMutations({ close: 'headerBar/setOpenMobileMenu' }),
-  //     closeMobileMenu() {
-  //       this.close()
-  //     }
-  //   }
 }
 </script>
 <style scoped lang="scss">
@@ -112,15 +103,7 @@ export default {
   align-items: center;
   flex-direction: column;
 }
-// .mobileMenu {
-//   position: fixed;
-//   z-index: 1000;
-//   width: 100vw;
-//   height: 100vh;
-//   background-color: #212121;
-//   color: #fff;
-//   overflow: hidden;
-// }
+
 .footer-wrape {
   width: 100%;
   height: 100%;
@@ -130,24 +113,23 @@ export default {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  background-color: #3d3d3d;
+  padding: 3.2rem;
+}
+.footer-items {
+  margin: 0.8rem 0 1.2rem;
 }
 
-// .header {
-//   width: 100%;
-//   height: 5rem;
-//   color: darkgoldenrod;
-//   background-color: rgb(122, 122, 122);
-// }
-// .main-content {
-//   width: 100%;
-//   height: 10rem;
-//   color: darkgoldenrod;
-//   background-color: whitesmoke;
-// }
-// .footer {
-//   width: 100%;
-//   height: 5rem;
-//   color: darkgoldenrod;
-//   background-color: rgb(248, 91, 91);
-// }
+.burger {
+  display: block;
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+.gloval-menu-header {
+  display: none;
+  @media (min-width: 1024px) {
+    display: block;
+  }
+}
 </style>

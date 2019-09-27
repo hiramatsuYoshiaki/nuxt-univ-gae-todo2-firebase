@@ -1,10 +1,7 @@
 <template>
   <div>
-    <nav v-if="isOpenMobileMenu" class="mobileMenu">
-      <div @click="closeMobileMenu()">
-        <i class="material-icons">close</i>
-      </div>
-      <slot name="mobileMenu" />
+    <nav v-if="isOpenMobileMenu" class="mobile-window">
+      <slot name="mobileWindow" />
     </nav>
     <header>
       <slot name="headerBar" />
@@ -24,21 +21,10 @@
   </div>
 </template>
 <script>
-// import { mapState } from 'vuex'
-import { mapState, mapMutations } from 'vuex'
-// import loginLayout from '~/layouts/loginLayout.vue'
+import { mapState } from 'vuex'
 export default {
-  //   components: {
-  //     loginLayout
-  //   },
   computed: {
     ...mapState('headerBar', ['isOpenMobileMenu'])
-  },
-  methods: {
-    ...mapMutations({ close: 'headerBar/setOpenMobileMenu' }),
-    closeMobileMenu() {
-      this.close()
-    }
   }
 }
 </script>
@@ -68,13 +54,12 @@ main {
   background-color: white;
   overflow: hidden;
 }
-nav.mobileMenu {
+.mobile-window {
   position: fixed;
   z-index: 1000;
   width: 100vw;
   height: 100vh;
-  //   background-color: #212121;
-  background-color: green;
+  background-color: #212121;
   color: #fff;
   overflow: hidden;
 }

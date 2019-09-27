@@ -1,9 +1,9 @@
 <template>
   <div class="wrape">
-    <div v-if="isLogin" @click="clickLogin()">
+    <div v-if="isLogin" class="hw--btn" @click="clickLogin()">
       Log out
     </div>
-    <div v-else @click="clickLogin()">
+    <div v-else class="hw--btn" @click="clickLogin()">
       Log in
     </div>
   </div>
@@ -23,14 +23,8 @@ export default {
   },
   methods: {
     clickLogin() {
-      alert(' login button click')
       this.isLogin = !this.isLogin
     }
   }
 }
 </script>
-<style scoped lang="scss">
-.wrape div {
-  cursor: pointer;
-}
-</style>

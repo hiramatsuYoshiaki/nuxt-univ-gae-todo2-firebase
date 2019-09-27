@@ -54,7 +54,7 @@ export default {
   height: 100%;
 }
 li {
-  display: inline;
-  padding: 0 2rem;
+  display: block;
+  margin: 1rem 0;
 }
 </style>
