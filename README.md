@@ -15,8 +15,7 @@ firbase strage を使用
 
 ### github
 
-clone
-github repository: nuxt-univ-gae-todo2
+github repository: nuxt-univ-gae-todo2-firebase
 
 ### google Cloud Platform
 
